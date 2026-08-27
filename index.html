@@ -1,0 +1,2606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rewayat Restaurant</title>
+<link rel="icon" href="images/logo.png">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+    
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#000;
+overflow-x:hidden;
+}
+
+/* Navbar */
+
+/*================ Navbar ================*/
+
+.navbar{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+padding:18px 0;
+
+background:rgba(0,0,0,.75);
+
+backdrop-filter:blur(8px);
+
+z-index:9999;
+
+transition:.4s;
+
+}
+
+.logo{
+    width:75px;
+    height:auto;
+}
+
+.brand-name{
+    color:white;
+    font-size:24px;
+    font-weight:700;
+    margin-left:12px;
+    margin-bottom:0;
+}
+
+.menu{
+display:flex;
+justify-content:center;
+align-items:center;
+list-style:none;
+gap:35px;
+margin:0;
+padding:0;
+}
+
+.menu a{
+text-decoration:none;
+color:white;
+font-size:17px;
+font-weight:500;
+transition:.4s;
+}
+
+.menu a:hover{
+color:#cda45e;
+}
+
+.book-btn{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+width:110px;
+
+height:42px;
+
+border:2px solid #cda45e;
+
+border-radius:30px;
+
+text-decoration:none;
+
+color:white;
+
+font-size:14px;
+
+font-weight:500;
+
+transition:.4s;
+
+}
+
+.book-btn:hover{
+
+background:#cda45e;
+
+color:black;
+
+}
+
+/*================ Hero ================*/
+
+.hero{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+
+.hero-image{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:75% center;
+    z-index:1;
+}
+
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.55);
+    z-index:2;
+}
+
+.hero-content{
+    position:relative;
+    z-index:3;
+    height:100vh;
+    display:flex;
+    align-items:center;
+}
+
+.hero-content{
+
+position:relative;
+
+z-index:2;
+
+height:100vh;
+
+display:flex;
+
+align-items:center;
+
+}
+
+.hero h1{
+    color:#ffffff;
+    font-size:68px;
+    font-weight:700;
+    line-height:80px;
+}
+
+.hero h1 span{
+    color:#cda45e;
+}
+
+.hero span{
+
+color:#cda45e;
+
+}
+
+.hero p{
+
+font-size:23px;
+
+margin:25px 0 40px;
+
+color:#f1f1f1;
+
+}
+
+.hero-btn{
+
+display:inline-block;
+
+padding:13px 34px;
+
+border:2px solid #cda45e;
+
+border-radius:35px;
+
+text-decoration:none;
+
+color:white;
+
+margin-right:15px;
+
+transition:.4s;
+
+}
+
+.hero-btn:hover{
+
+background:#cda45e;
+
+color:black;
+
+}
+
+
+/*================ About =================*/
+
+.about{
+
+background:#0c0b09;
+
+padding:100px 0;
+
+}
+
+.about h5{
+
+color:#cda45e;
+
+letter-spacing:2px;
+
+font-size:16px;
+
+margin-bottom:10px;
+
+}
+
+.about h2{
+
+font-size:40px;
+
+font-weight:700;
+
+margin-bottom:20px;
+
+}
+
+.about-text{
+
+color:#d5d5d5;
+
+line-height:30px;
+
+margin-bottom:25px;
+
+}
+
+.about-list{
+
+list-style:none;
+
+padding:0;
+
+}
+
+.about-list li{
+
+font-size:18px;
+
+margin-bottom:15px;
+
+color:#eee;
+
+}
+
+.about-img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    object-position:center;
+    border-radius:10px;
+    border:4px solid rgba(255,255,255,.15);
+    transition:.4s;
+}
+
+.about-img:hover{
+    transform:scale(1.03);
+}
+
+.about-img:hover{
+
+transform:scale(1.03);
+
+}
+
+
+.about{
+    background:#0c0b09;
+    padding:80px 0;
+}
+
+.about .row{
+    align-items:center;
+}
+
+.about h2{
+    font-size:42px;
+    color:#fff;
+    margin-bottom:20px;
+}
+
+.about-text{
+    color:#ccc;
+    line-height:30px;
+}
+
+/*================ WHY US =================*/
+
+.why-us{
+    background:#111;
+    padding:90px 0;
+}
+
+.section-title h5{
+    color:#cda45e;
+    font-size:16px;
+    letter-spacing:2px;
+}
+
+.section-title h2{
+    color:#fff;
+    font-size:42px;
+    font-weight:700;
+    margin-bottom:50px;
+}
+
+.why-card{
+    background:#1a1814;
+    padding:40px 30px;
+    transition:.4s;
+    margin-bottom:30px;
+    height:100%;
+    border-radius:8px;
+}
+
+.why-card:hover{
+    background:#cda45e;
+    transform:translateY(-10px);
+}
+
+.why-card h1{
+    color:#cda45e;
+    font-size:40px;
+    font-weight:700;
+}
+
+.why-card:hover h1,
+.why-card:hover h3,
+.why-card:hover p{
+    color:#000;
+}
+
+.why-card h3{
+    color:#fff;
+    margin:20px 0;
+    font-size:25px;
+}
+
+.why-card p{
+    color:#ccc;
+    line-height:28px;
+}
+
+
+/*================ MENU =================*/
+
+.menu-nav{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+list-style:none;
+
+gap:28px;
+
+margin:0;
+
+padding:0;
+
+}
+
+.menu-nav li{
+
+margin:0;
+
+}
+
+.menu-nav a{
+
+text-decoration:none;
+
+color:#fff;
+
+font-size:17px;
+
+font-weight:500;
+
+}
+
+
+/*================ FOOD CARDS =================*/
+
+.category-title{
+    color:#fff;
+    font-size:38px;
+    margin:60px 0 30px;
+    font-weight:700;
+}
+
+.food-card{
+    background:#fff;
+    border-radius:15px;
+    padding:20px;
+    position:relative;
+    text-align:center;
+    transition:.4s;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.food-card:hover{
+    transform:translateY(-10px);
+}
+
+.discount{
+    position:absolute;
+    left:15px;
+    top:15px;
+    background:red;
+    color:#fff;
+    padding:5px 10px;
+    border-radius:5px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.food-img{
+    width:150px;
+    height:150px;
+    object-fit:cover;
+    border-radius:50%;
+    margin:30px auto 15px;
+    display:block;
+}
+
+.food-card h4{
+    font-size:24px;
+    font-weight:700;
+    color:#222;
+}
+
+.price{
+    margin:15px 0;
+}
+
+.price span{
+    background:#ff0066;
+    color:#fff;
+    padding:8px 15px;
+    border-radius:20px;
+    font-weight:600;
+}
+
+.price del{
+    color:#888;
+    margin-left:10px;
+}
+
+.food-card button{
+    border:none;
+    background: #cda45e;
+    color:#000;
+    width:100%;
+    padding:10px 25px;
+    border-radius:10px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.food-card button:hover{
+    background:#ffc107;
+    color:#fff;
+}
+
+/*================ Specials =================*/
+
+.specials{
+
+background:#111;
+
+padding:90px 0;
+
+}
+
+.special-menu{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+.special-menu a{
+
+padding:18px 20px;
+
+text-decoration:none;
+
+color:#fff;
+
+border-left:3px solid #333;
+
+transition:.4s;
+
+font-weight:500;
+
+}
+
+.special-menu a:hover{
+
+background:#cda45e;
+
+color:black;
+
+border-color:#cda45e;
+
+}
+
+.special-img{
+
+width:100%;
+
+height:350px;
+
+object-fit:cover;
+
+border-radius:12px;
+
+}
+
+.specials h3{
+
+font-size:34px;
+color:#cda45e;
+
+margin-bottom:20px;
+
+}
+
+.specials p{
+
+color:#ccc;
+
+line-height:30px;
+
+}
+
+
+/*================ GALLERY =================*/
+
+.gallery{
+
+    background:#0c0b09;
+
+    padding:90px 0;
+
+}
+
+.gallery-img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+    transition:.4s;
+
+    border:3px solid rgba(255,255,255,.08);
+
+}
+
+.gallery-img:hover{
+
+    transform:scale(1.08);
+
+    border-color:#cda45e;
+
+    cursor:pointer;
+
+}
+
+
+/*================ CONTACT =================*/
+
+.contact{
+    background:#111;
+    padding:90px 0;
+}
+
+.contact-info{
+    color:#fff;
+}
+
+.contact-info h4{
+    color:#cda45e;
+    margin-top:25px;
+    font-size:22px;
+}
+
+.contact-info p{
+    color:#ccc;
+    line-height:28px;
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    width:100%;
+
+    background:#1a1814;
+
+    border:1px solid #444;
+
+    color:#fff;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    outline:none;
+
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+
+    color:#999;
+
+}
+
+.contact-form textarea{
+
+    resize:none;
+
+}
+
+.contact-form button{
+
+    margin-top:20px;
+
+    background:#cda45e;
+
+    color:#fff;
+
+    border:none;
+
+    padding:14px 35px;
+
+    border-radius:30px;
+
+    transition:.4s;
+
+    font-weight:600;
+
+}
+
+.contact-form button:hover{
+
+    background:#b38b45;
+
+}
+
+/*================ MAP =================*/
+
+.map-section iframe{
+
+width:100%;
+
+height:420px;
+
+border:0;
+
+display:block;
+
+}
+
+
+/*================ FOOTER =================*/
+
+.footer{
+
+background:#0c0b09;
+
+padding:45px 0;
+
+text-align:center;
+
+color:#fff;
+
+}
+
+.footer hr{
+
+border-color:#333;
+
+margin:30px 0;
+
+}
+
+.social-icons{
+
+margin-bottom:20px;
+
+}
+
+.social-icons a{
+
+display:inline-flex;
+
+justify-content:center;
+
+align-items:center;
+
+width:50px;
+
+height:50px;
+
+border:1px solid #555;
+
+border-radius:50%;
+
+margin:0 8px;
+
+text-decoration:none;
+
+color:#fff;
+
+font-size:20px;
+
+transition:.4s;
+
+}
+
+.social-icons a:hover{
+
+background:#cda45e;
+
+border-color:#cda45e;
+
+color:#000;
+
+transform:translateY(-5px);
+
+}
+
+.footer p{
+
+color:#bbb;
+
+font-size:15px;
+
+margin:8px 0;
+
+}
+
+.footer span{
+
+color:#cda45e;
+
+font-weight:600;
+
+}
+
+.footer b{
+
+color:#fff;
+
+}
+
+
+/* CART BADGE */
+
+.cart-link{
+
+position:relative;
+
+}
+
+
+#cart-count{
+
+background:#cda45e;
+color:#000;
+font-size:12px;
+font-weight:700;
+
+width:22px;
+height:22px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+border-radius:50%;
+
+margin-left:5px;
+
+}
+
+@media(max-width:991px){
+
+
+.menu{
+
+flex-direction:column;
+gap:15px;
+background:#000;
+padding:20px;
+
+}
+
+
+.navbar .row{
+
+text-align:center;
+
+}
+
+
+.navbar .col-lg-4{
+
+justify-content:center!important;
+margin-top:15px;
+
+}
+
+
+.book-btn{
+
+font-size:13px;
+padding:7px 12px;
+
+}
+
+
+}
+.menu-category{
+
+text-align:center;
+margin-bottom:40px;
+
+}
+
+
+.category-btn{
+
+background:transparent;
+border:2px solid #cda45e;
+color:#fff;
+padding:10px 25px;
+border-radius:30px;
+margin:5px;
+cursor:pointer;
+transition:.4s;
+
+}
+
+
+.category-btn:hover,
+.category-btn.active{
+
+background:#cda45e;
+color:#000;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ================= Navbar ================= -->
+
+<nav class="navbar">
+
+<div class="container">
+
+<div class="row align-items-center w-100">
+
+    <!-- Logo -->
+
+    <div class="col-lg-3">
+    <a href="index.html" class="d-flex align-items-center text-decoration-none">
+        <img src="images/logo.png" class="logo">
+        <h2 class="brand-name ms-2 mb-0">Rewayat</h2>
+    </a>
+</div>
+
+    <!-- Menu -->
+
+    <div class="col-lg-6">
+
+        <ul class="menu">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="menu.html">Menu</a></li>
+
+<li><a href="specials.html">Specials</a></li>
+
+<li><a href="gallery.html">Gallery</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+    </div>
+
+    <!-- Buttons -->
+
+    <div class="col-lg-3">
+
+        <div class="d-flex justify-content-end gap-2">
+
+     <a href="cart.html" class="book-btn cart-link">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+&nbsp;Cart
+
+<span id="cart-count">
+0
+</span>
+
+</a>
+            <a href="login.html" class="book-btn">Login</a>
+
+            <a href="register.html" class="book-btn">Register</a>
+            
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+    <img src="images/hero.jpeg" class="hero-image">
+
+    <div class="overlay"></div>
+
+    <div class="container hero-content">
+
+        <div class="row align-items-center min-vh-100">
+
+        <div class="col-12 col-md-12 col-lg-7 text-center text-lg-start">
+
+                <h1>
+                    Welcome to
+                    <span>Rewayat Restaurant</span>
+                </h1>
+
+                <p>
+                    Traditional Pakistani Cuisine with Delicious Taste
+                </p>
+
+                <a href="menu.html" class="hero-btn">OUR MENU</a>
+
+               
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= About Section ================= -->
+
+<section class="about">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+<div class="col-12 col-md-6">
+
+                <img src="images/about.jpeg" class="about-img">
+
+            </div>
+
+           <div class="col-12 col-md-6">
+
+                <h5>ABOUT US</h5>
+
+                <h2>Welcome to Rewayat Restaurant</h2>
+
+                <p class="about-text">
+                    Rewayat Restaurant is a place where traditional Pakistani flavors
+                    meet modern hospitality. We serve delicious BBQ, Karahi,
+                    Handi, Biryani and many more dishes prepared with fresh ingredients.
+                </p>
+
+                <ul class="about-list">
+
+                    <li>
+<i class="fa-solid fa-check text-warning me-2"></i>
+Fresh & Quality Ingredients
+</li>
+
+<li>
+<i class="fa-solid fa-check text-warning me-2"></i>
+Traditional Pakistani Cuisine
+</li>
+
+<li>
+<i class="fa-solid fa-check text-warning me-2"></i>
+Comfortable Family Environment
+</li>
+
+<li>
+<i class="fa-solid fa-check text-warning me-2"></i>
+Professional Customer Service
+</li>
+
+<li>
+<i class="fa-solid fa-check text-warning me-2"></i>
+Experienced Chefs
+</li>
+
+<li>
+<i class="fa-solid fa-check text-warning me-2"></i>
+Clean & Hygienic Kitchen
+</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= Why Choose Us ================= -->
+
+<section class="why-us">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h5>WHY US</h5>
+
+            <h2>Why Choose Rewayat</h2>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-4">
+
+                <div class="why-card">
+
+                    <h1>01</h1>
+
+                    <h3>Quality Food</h3>
+
+                    <p>
+                        We prepare every dish using fresh ingredients and authentic Pakistani recipes.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="why-card">
+
+                    <h1>02</h1>
+
+                    <h3>Family Environment</h3>
+
+                    <p>
+                        A comfortable and peaceful atmosphere for families and friends.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="why-card">
+
+                    <h1>03</h1>
+
+                    <h3>Fast Service</h3>
+
+                    <p>
+                        Delicious food served quickly with excellent customer care.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MENU ================= -->
+
+<section class="menu-page">
+
+    <div class="container">
+
+        <div class="section-title text-center">
+
+            <h5>MENU</h5>
+
+            <h2>Our Delicious Menu</h2>
+
+        </div>
+
+        <!-- Categories -->
+
+        <div class="menu-nav">
+
+
+
+<div class="menu-category">
+
+<button class="category-btn active" data-category="all">
+All
+</button>
+
+<button class="category-btn" data-category="STARTERS (TURKISH)">
+Starters (Turkish)
+</button>
+
+<button class="category-btn" data-category="STARTERS (DESI)">
+Starters (Desi) 
+</button>
+
+<button class="category-btn" data-category="FISH">
+FISH
+</button>
+
+<button class="category-btn" data-category="DESI BBQ">
+DESI BBQ
+</button>
+
+<button class="category-btn" data-category="PLATTER">
+PLATTER
+</button>
+
+<button class="category-btn" data-category="HANDI">
+HANDI
+</button>
+
+</div>
+
+</div>
+
+        <!-- ================= STARTERS (TURKISH) ================= -->
+
+        <div class="menu-section" data-category="STARTERS (TURKISH)">
+
+<h2 class="category-title">STARTERS (TURKISH)</h2>
+
+
+<div class="row">
+
+    <!-- Card 1 -->
+
+<div class="col-12 col-sm-6 col-lg-4 mb-4">
+
+        <div class="food-card" data-category="STARTERS (TURKISH)">
+
+            <span class="discount">20% OFF</span>
+            
+
+            <img src="images/hummus.jpg" class="food-img">
+
+            <h4>Hummus</h4>
+
+            <div class="price">
+
+                <span>Rs.560</span>
+
+                <del>Rs.700</del>
+
+            </div>
+        
+            
+<button 
+class="add-cart"
+data-name="hummus"
+data-price="560">
+
+Add To Cart
+
+</button>
+        </div>
+
+    </div>
+
+    <!-- Card 2 -->
+
+    <div class="col-12 col-sm-6 col-lg-4 mb-4">
+
+        <div class="food-card" data-category="STARTERS (TURKISH)">
+
+            <span class="discount">20% OFF</span>
+
+            <img src="images/babaghanoush.jpg" class="food-img">
+
+            <h4>Baba Ghanoush</h4>
+
+            <div class="price">
+
+                <span>Rs.640</span>
+
+                <del>Rs.800</del>
+
+            </div>
+
+           
+<button 
+class="add-cart"
+data-name="Baba Ghanoush"
+data-price="640">
+
+Add To Cart
+
+</button>
+
+        </div>
+
+    </div>
+
+    <!-- Card 3 -->
+
+    <div class="col-12 col-sm-6 col-lg-4 mb-4">
+
+        <div class="food-card" data-category="STARTERS (TURKISH)">
+
+            <span class="discount">20% OFF</span>
+
+            <img src="images/turkishsalad.jpg" class="food-img">
+
+            <h4>Turkish Salad</h4>
+
+            <div class="price">
+
+                <span>Rs.520</span>
+
+                <del>Rs.650</del>
+
+            </div>
+
+            
+<button 
+class="add-cart"
+data-name="Turkish Salad"
+data-price="520">
+
+Add To Cart
+
+</button>
+        </div>
+
+    </div>
+
+    <!-- Card 4 -->
+
+    <div class="col-12 col-sm-6 col-lg-4 mb-4">
+
+        <div class="food-card" data-category="STARTERS (TURKISH)">
+
+            <span class="discount">20% OFF</span>
+
+            <img src="images/cheeseroll.jpg" class="food-img">
+
+            <h4>Cheese Rolls</h4>
+
+            <div class="price">
+
+                <span>Rs.680</span>
+
+                <del>Rs.850</del>
+
+            </div>
+
+            
+<button 
+class="add-cart"
+data-name="Cheese Rolls"
+data-price="680">
+
+Add To Cart
+
+</button>
+
+        </div>
+
+    </div>
+
+    <!-- Card 5 -->
+
+    <div class="col-12 col-sm-6 col-lg-4 mb-4">
+
+        <div class="food-card" data-category="STARTERS (TURKISH)">
+
+            <span class="discount">20% OFF</span>
+
+            <img src="images/garlicbread.jpg" class="food-img">
+
+            <h4>Garlic Bread</h4>
+
+            <div class="price">
+
+                <span>Rs.480</span>
+
+                <del>Rs.600</del>
+
+            </div>
+
+            
+<button 
+class="add-cart"
+data-name="Garlic Bread"
+data-price="480">
+
+Add To Cart
+
+</button>
+
+        </div>
+
+    </div>
+
+    <!-- Card 6 -->
+
+    <div class="col-12 col-sm-6 col-lg-4 mb-4">
+
+        <div class="food-card" data-category="STARTERS (TURKISH)">
+
+            <span class="discount">20% OFF</span>
+
+            <img src="images/falafel.jpg" class="food-img">
+
+            <h4>Falafel</h4>
+
+            <div class="price">
+
+                <span>Rs.720</span>
+
+                <del>Rs.900</del>
+
+            </div>
+
+            
+<button 
+class="add-cart"
+data-name="Falafel"
+data-price="720">
+
+Add To Cart
+
+</button>
+
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+<!-- ================= STARTERS (DESI) ================= -->
+
+<div class="menu-section" data-category="STARTERS (DESI)">
+
+<h2 class="category-title">STARTERS (DESI)</h2>
+
+<div class="row">
+
+    <!-- Card 1 -->
+
+    <div class="col-12 col-sm-6 col-lg-4 mb-4">
+
+        <div class="food-card" data-category="STARTERS (DESI)">
+
+            <span class="discount">20% OFF</span>
+
+            <img src="images/tikka-wings.jpg" class="food-img">
+
+            <h4>Tikka Wings</h4>
+
+            <div class="price">
+                <span>Rs.1,199</span>
+                <del>Rs.1,499</del>
+            </div>
+
+            <button 
+class="add-cart"
+data-name="Tikka Wings"
+data-price="1,199">
+
+Add To Cart
+
+</button>
+
+        </div>
+
+    </div>
+
+    <!-- Card 2 -->
+
+    <div class="col-12 col-sm-6 col-lg-4 mb-4">
+
+        <div class="food-card" data-category="STARTERS (DESI)">
+
+            <span class="discount">20% OFF</span>
+
+            <img src="images/plain-fries.jpg" class="food-img">
+
+            <h4>Plain Fries</h4>
+
+            <div class="price">
+                <span>Rs.548</span>
+                <del>Rs.685</del>
+            </div>
+
+            <button 
+class="add-cart"
+data-name="Plain Fries"
+data-price="548">
+
+Add To Cart
+
+</button>
+
+        </div>
+
+    </div>
+
+    <!-- Card 3 -->
+
+    <div class="col-12 col-sm-6 col-lg-4 mb-4">
+
+        <div class="food-card" data-category="STARTERS (DESI)">
+
+            <span class="discount">20% OFF</span>
+
+            <img src="images/crispy-fish.jpg" class="food-img">
+
+            <h4>Crispy Finger Fish</h4>
+
+            <div class="price">
+                <span>Rs.1,376</span>
+                <del>Rs.1,720</del>
+            </div>
+
+            <button 
+class="add-cart"
+data-name="Crispy Finger Fish"
+data-price="1,376">
+
+Add To Cart
+
+</button>
+
+        </div>
+
+    </div>
+
+    <!-- Card 4 -->
+
+    <div class="col-12 col-sm-6 col-lg-4 mb-4">
+
+        <div class="food-card" data-category="STARTERS (DESI)">
+
+            <span class="discount">20% OFF</span>
+
+            <img src="images/papri-chaat.jpg" class="food-img">
+
+            <h4>Papri Chaat</h4>
+
+            <div class="price">
+                <span>Rs.592</span>
+                <del>Rs.740</del>
+            </div>
+
+            <button 
+class="add-cart"
+data-name="Papri Chaat"
+data-price="592">
+
+Add To Cart
+
+</button>
+
+        </div>
+
+    </div>
+
+    <!-- Card 5 -->
+
+    <div class="col-12 col-sm-6 col-lg-4 mb-4">
+
+        <div class="food-card" data-category="STARTERS (DESI)">
+
+            <span class="discount">20% OFF</span>
+
+            <img src="images/palak-patta-chaat.jpg" class="food-img">
+
+            <h4>Palak Patta Chaat</h4>
+
+            <div class="price">
+                <span>Rs.916</span> 
+                <del>Rs.1145</del>
+            </div>
+
+            <button 
+class="add-cart"
+data-name="Palak Patta Chaat"
+data-price="916">
+
+Add To Cart
+
+</button>
+
+        </div>
+
+    </div>
+
+    <!-- Card 6 -->
+
+    <div class="col-12 col-sm-6 col-lg-4 mb-4">
+
+        <div class="food-card" data-category="STARTERS (DESI)">
+
+            <span class="discount">20% OFF</span>
+
+            <img src="images/bbq-loaded-fries.jpg" class="food-img">
+
+            <h4>BBQ Loaded Fries</h4>
+
+            <div class="price">
+                <span>Rs.916</span>
+                <del>Rs.1145</del>
+            </div>
+
+            <button 
+class="add-cart"
+data-name="BBQ Loaded Fries"
+data-price="916">
+
+Add To Cart
+
+</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+<!-- ================= FISH ================= -->
+
+<div class="menu-section" data-category="FISH">
+
+<h2 class="category-title">FISH</h2>
+
+<div class="row">
+
+    <!-- Card 1 -->
+
+    <div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <div class="food-card" data-category="FISH">
+
+            <span class="discount">20% OFF</span>
+
+            <img src="images/fried-fish.jpg" class="food-img">
+
+            <h4>Fried Fish</h4>
+
+            <div class="price">
+                <span>Rs.1,360</span>
+                <del>Rs.1,700</del>
+            </div>
+
+            <button 
+class="add-cart"
+data-name="Fried Fish"
+data-price="1,360">
+
+Add To Cart
+
+</button>
+
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+
+    <div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <div class="food-card" data-category="FISH">
+
+            <span class="discount">20% OFF</span>
+
+            <img src="images/grilled-fish.jpg" class="food-img">
+
+            <h4>Grilled Fish</h4>
+
+            <div class="price">
+                <span>Rs.1,520</span>
+                <del>Rs.1,900</del>
+            </div>
+
+            <button 
+class="add-cart"
+data-name="Grilled Fish"
+data-price="1,520">
+
+Add To Cart
+
+</button>
+
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+
+    <div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <div class="food-card" data-category="FISH">
+
+            <span class="discount">20% OFF</span>
+
+            <img src="images/fish-tikka.jpg" class="food-img">
+
+            <h4>Fish Tikka</h4>
+
+            <div class="price">
+                <span>Rs.1,480</span>
+                <del>Rs.1,850</del>
+            </div>
+
+            <button 
+class="add-cart"
+data-name="Fish Tikka"
+data-price="1,480">
+
+Add To Cart
+
+</button>
+
+        </div>
+    </div>
+
+    <!-- Card 4 -->
+
+    <div class="col-lg-4 col-md-6 mb-4">
+        <div class="food-card" data-category="FISH">
+
+            <span class="discount">20% OFF</span>
+
+            <img src="images/fish-fingers.jpg" class="food-img">
+
+            <h4>Fish Fingers</h4>
+
+            <div class="price">
+                <span>Rs.980</span>
+                <del>Rs.1,225</del>
+            </div>
+
+            <button 
+class="add-cart"
+data-name="Fish Fingers"
+data-price="980">
+
+Add To Cart
+
+</button>
+
+        </div>
+    </div>
+
+    <!-- Card 5 -->
+
+
+<div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <div class="food-card" data-category="FISH">
+
+            <span class="discount">20% OFF</span>
+
+            <img src="images/crispy-fish.jpg" class="food-img">
+
+            <h4>Crispy Fish</h4>
+
+            <div class="price">
+                <span>Rs.1,240</span>
+                <del>Rs.1,550</del>
+            </div>
+
+            <button 
+class="add-cart"
+data-name="Crispy Fish"
+data-price="1,240">
+
+Add To Cart
+
+</button>
+
+        </div>
+    </div>
+
+    <!-- Card 6 -->
+
+    <div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <div class="food-card" data-category="FISH">
+
+            <span class="discount">20% OFF</span>
+
+            <img src="images/fish-chips.jpg" class="food-img">
+
+            <h4>Fish & Chips</h4>
+
+            <div class="price">
+                <span>Rs.1,120</span>
+                <del>Rs.1400</del>
+            </div>
+
+            
+<button 
+class="add-cart"
+data-name="Fish & Chips"
+data-price="1,120">
+
+Add To Cart
+
+</button>
+        </div>
+    </div>
+
+</div>
+</div>
+
+<!-- ================= DESI BBQ ================= -->
+
+<div class="menu-section" data-category="DESI BBQ">
+
+<h2 class="category-title">DESI BBQ</h2>
+
+<div class="row">
+
+    <!-- Card 1 -->
+    <div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <div class="food-card" data-category="DESI BBQ">
+            <span class="discount">20% OFF</span>
+
+            <img src="images/chicken-tikka.jpg" class="food-img">
+
+            <h4>Chicken Tikka</h4>
+
+            <div class="price">
+                <span>Rs.760</span>
+                <del>Rs.950</del>
+            </div>
+
+            <button 
+class="add-cart"
+data-name="Chicken Tikka"
+data-price="760">
+
+Add To Cart
+
+</button>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <div class="food-card" data-category="DESI BBQ">
+            <span class="discount">20% OFF</span>
+
+            <img src="images/malai-boti.jpg" class="food-img">
+
+            <h4>Malai Boti</h4>
+
+            <div class="price">
+                <span>Rs.920</span>
+                <del>Rs.1,150</del>
+            </div>
+
+            <button 
+class="add-cart"
+data-name="Malai Boti"
+data-price="920">
+
+Add To Cart
+
+</button>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <div class="food-card" data-category="DESI BBQ">
+            <span class="discount">20% OFF</span>
+
+            <img src="images/chicken-boti.jpg" class="food-img">
+
+            <h4>Chicken Boti</h4>
+
+            <div class="price">
+                <span>Rs.880</span>
+                <del>Rs.1,100</del>
+            </div>
+
+            <button 
+class="add-cart"
+data-name="Chicken Boti"
+data-price="880">
+
+Add To Cart
+
+</button>
+        </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <div class="food-card" data-category="DESI BBQ">
+            <span class="discount">20% OFF</span>
+
+            <img src="images/beef-boti.jpg" class="food-img">
+
+            <h4>Beef Boti</h4>
+
+            <div class="price">
+                <span>Rs.990</span>
+                <del>Rs.1,240</del>
+            </div>
+
+            <button 
+class="add-cart"
+data-name="Beef Boti"
+data-price="990">
+
+Add To Cart
+
+</button>
+        </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <div class="food-card" data-category="DESI BBQ">
+            <span class="discount">20% OFF</span>
+
+            <img src="images/chicken-seekh-kabab.jpg" class="food-img">
+
+            <h4>Chicken Seekh Kabab</h4>
+
+            <div class="price">
+                <span>Rs.820</span>
+                <del>Rs.1,025</del>
+            </div>
+
+           <button 
+class="add-cart"
+data-name="Chicken Seekh Kabab"
+data-price="820">
+
+Add To Cart
+
+</button>
+        </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <div class="food-card" data-category="DESI BBQ">
+            <span class="discount">20% OFF</span>
+
+            <img src="images/beef-seekh-kabab.jpg" class="food-img">
+
+            <h4>Beef Seekh Kabab</h4>
+
+            <div class="price">
+                <span>Rs.920</span>
+                <del>Rs.1,150</del>
+            </div>
+
+            <button 
+class="add-cart"
+data-name="Beef Seekh Kabab"
+data-price="920">
+
+Add To Cart
+
+</button>
+        </div>
+    </div>
+
+</div>
+</div>
+
+<!-- ================= PLATTER ================= -->
+
+<div class="menu-section" data-category="PLATTER">
+<h2 class="category-title">PLATTER</h2>
+
+<div class="row">
+
+    <!-- Card 1 -->
+    <div class="col-lg-4 col-md-6 mb-4">
+        <div class="food-card" data-category="PLATTER">
+            <span class="discount">20% OFF</span>
+
+            <img src="images/family-platter.jpg" class="food-img">
+
+            <h4>Family BBQ Platter</h4>
+
+            <div class="price">
+                <span>Rs.4,999</span>
+                <del>Rs.6,249</del>
+            </div>
+
+            <button 
+class="add-cart"
+data-name="Family BBQ Platter"
+data-price="4,999">
+
+Add To Cart
+
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-lg-4 col-md-6 mb-4">
+        <div class="food-card" data-category="PLATTER">
+            <span class="discount">20% OFF</span>
+
+            <img src="images/rewayat-special.jpg" class="food-img">
+
+            <h4>Rewayat Special Platter</h4>
+
+            <div class="price">
+                <span>Rs.3,599</span>
+                <del>Rs.4,499</del>
+            </div>
+
+            <button 
+class="add-cart"
+data-name="Rewayat Special Platter"
+data-price="3,599">
+
+Add To Cart
+
+</button>
+
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-lg-4 col-md-6 mb-4">
+        <div class="food-card" data-category="PLATTER">
+            <span class="discount">20% OFF</span>
+
+            <img src="images/turkish-mix.jpg" class="food-img">
+
+            <h4>Turkish Mix Platter</h4>
+
+            <div class="price">
+                <span>Rs.4,299</span>
+                <del>Rs.5,375</del>
+            </div>
+
+            <button 
+class="add-cart"
+data-name="Turkish Mix Platter"
+data-price="4,299">
+
+Add To Cart
+
+</button>
+
+        </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-lg-4 col-md-6 mb-4">
+        <div class="food-card" data-category="PLATTER">
+            <span class="discount">20% OFF</span>
+
+            <img src="images/chicken-platter.jpg" class="food-img">
+
+            <h4>Chicken Platter</h4>
+
+            <div class="price">
+                <span>Rs.2,499</span>
+                <del>Rs.3,125</del>
+            </div>
+
+            <button 
+class="add-cart"
+data-name="Chicken Platter"
+data-price="2,499">
+
+Add To Cart
+
+</button>
+
+        </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-lg-4 col-md-6 mb-4">
+        <div class="food-card" data-category="PLATTER">
+            <span class="discount">20% OFF</span>
+
+            <img src="images/grill-platter.jpg" class="food-img">
+
+            <h4>Grill Platter</h4>
+
+            <div class="price">
+                <span>Rs.3,899</span>
+                <del>Rs.4,875</del>
+            </div>
+
+            <button 
+class="add-cart"
+data-name="Grill Platter"
+data-price="3,899">
+
+Add To Cart
+
+</button>
+
+        </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col-lg-4 col-md-6 mb-4">
+        <div class="food-card" data-category="PLATTER">
+            <span class="discount">20% OFF</span>
+
+            <img src="images/jumbo-platter.jpg" class="food-img">
+
+            <h4>Jumbo Platter</h4>
+
+            <div class="price">
+                <span>Rs.5,499</span>
+                <del>Rs.6,875</del>
+            </div>
+
+            <button 
+class="add-cart"
+data-name="Jumbo Platter"
+data-price="5,499">
+
+Add To Cart
+
+</button>
+
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+<!-- ================= HANDI ================= -->
+
+<div class="menu-section" data-category="HANDI">
+
+<h2 class="category-title">HANDI</h2>
+
+<div class="row">
+
+    <!-- Card 1 -->
+
+    <div class="col-lg-4 col-md-6 mb-4">
+
+        <div class="food-card" data-category="HANDI">
+
+            <span class="discount">20% OFF</span>
+
+            <img src="images/chicken-handi.jpg" class="food-img">
+
+            <h4>Chicken Handi</h4>
+
+            <div class="price">
+                <span>Rs.1,799</span>
+                <del>Rs.2,249</del>
+            </div>
+
+            <button 
+class="add-cart"
+data-name="Chicken Handi"
+data-price="1,799">
+
+Add To Cart
+
+</button>
+
+        </div>
+
+    </div>
+
+    <!-- Card 2 -->
+
+    <div class="col-lg-4 col-md-6 mb-4">
+
+        <div class="food-card" data-category="HANDI">
+
+            <span class="discount">20% OFF</span>
+
+            <img src="images/white-handi.jpg" class="food-img">
+
+            <h4>White Handi</h4>
+
+            <div class="price">
+                <span>Rs.1,999</span>
+                <del>Rs.2,499</del>
+            </div>
+
+            <button 
+class="add-cart"
+data-name="White Handi"
+data-price="1,999">
+
+Add To Cart
+
+</button>
+
+        </div>
+
+    </div>
+
+    <!-- Card 3 -->
+
+    <div class="col-lg-4 col-md-6 mb-4">
+
+        <div class="food-card" data-category="HANDI">
+
+            <span class="discount">20% OFF</span>
+
+            <img src="images/mutton-handi.jpg" class="food-img">
+
+            <h4>Mutton Handi</h4>
+
+            <div class="price">
+                <span>Rs.2,699</span>
+                <del>Rs.3,375</del>
+            </div>
+
+            <button 
+class="add-cart"
+data-name="Mutton Handi"
+data-price="2,699">
+
+Add To Cart
+
+</button>
+
+        </div>
+
+    </div>
+
+    <!-- Card 4 -->
+
+    <div class="col-lg-4 col-md-6 mb-4">
+
+        <div class="food-card" data-category="HANDI">
+
+            <span class="discount">20% OFF</span>
+
+            <img src="images/achari-handi.jpg" class="food-img">
+
+            <h4>Achari Handi</h4>
+
+            <div class="price">
+                <span>Rs.1,899</span>
+                <del>Rs.2,375</del>
+            </div>
+
+            <button 
+class="add-cart"
+data-name="Achari Handi"
+data-price="1,899">
+
+Add To Cart
+
+</button>
+
+        </div>
+
+    </div>
+
+    <!-- Card 5 -->
+
+    <div class="col-lg-4 col-md-6 mb-4">
+
+        <div class="food-card" data-category="HANDI">
+
+            <span class="discount">20% OFF</span>
+
+            <img src="images/afghani-handi.jpg" class="food-img">
+
+            <h4>Afghani Handi</h4>
+
+            <div class="price">
+                <span>Rs.2,199</span>
+                <del>Rs.2,749</del>
+            </div>
+
+            <button 
+class="add-cart"
+data-name="Afghani Handi"
+data-price="2,199">
+
+Add To Cart
+
+</button>
+
+        </div>
+
+    </div>
+
+    <!-- Card 6 -->
+
+    <div class="col-lg-4 col-md-6 mb-4">
+
+        <div class="food-card" data-category="HANDI">
+
+            <span class="discount">20% OFF</span>
+
+            <img src="images/special-handi.jpg" class="food-img">
+
+            <h4>Rewayat Special Handi</h4>
+
+            <div class="price">
+                <span>Rs.2,399</span>
+                <del>Rs.2,999</del>
+            </div>
+
+            <button 
+class="add-cart"
+data-name="Rewayat Special Handi"
+data-price="2,399">
+
+Add To Cart
+
+</button>
+
+        </div>
+
+    </div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ================= Specials ================= -->
+
+<section class="specials">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h5>SPECIALS</h5>
+
+            <h2>Check Our Specials</h2>
+
+        </div>
+
+        <div class="row">
+
+            <!-- Left Side -->
+
+            <div class="col-lg-4">
+
+                <div class="special-menu">
+
+                    <a href="#">Rewayat Special Handi</a>
+
+                    <a href="#">Chicken Karahi</a>
+
+                    <a href="#">Family BBQ Platter</a>
+
+                    <a href="#">Turkish Grill</a>
+
+                    <a href="#">Mutton Handi</a>
+
+                </div>
+
+            </div>
+
+            <!-- Right Side -->
+
+            <div class="col-lg-8">
+
+                <div class="row align-items-center">
+
+                    <div class="col-lg-7">
+
+                        <h3>Rewayat Special Handi</h3>
+
+                        <p>
+                            Our signature handi is prepared with fresh cream,
+                            butter, aromatic spices and tender chicken served
+                            with hot naan and salad.
+                        </p>
+
+                    </div>
+
+                    <div class="col-lg-5">
+
+                        <img src="images/special-handi.jpg" class="special-img">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= GALLERY ================= -->
+
+<section class="gallery">
+
+    <div class="container">
+
+        <div class="section-title text-center">
+
+            <h5>GALLERY</h5>
+
+            <h2>Our Restaurant Gallery</h2>
+
+        </div>
+
+        <div class="row g-3">
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <img src="images/about.jpeg" class="gallery-img">
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <img src="images/hero.jpeg" class="gallery-img">
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <img src="images/gallery.jpeg" class="gallery-img">
+            </div>
+            
+        <div class="col-lg-3 col-md-4 col-6">
+                <img src="images/gallery6.jpg" class="gallery-img">
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <img src="images/gallery2.jpg" class="gallery-img">
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <img src="images/gallery3.jpg" class="gallery-img">
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <img src="images/gallery4.jpg" class="gallery-img">
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <img src="images/gallery5.jpg" class="gallery-img">
+            </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact">
+
+
+
+    <div class="container">
+
+        <div class="section-title text-center">
+
+            <h5>CONTACT</h5>
+
+            <h2>Contact Us</h2>
+
+        </div>
+
+
+<!-- ================= MAP ================= -->
+
+<section class="map-section">
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.601720761752!2d73.07192817473644!3d33.66748033795068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df95005ad5a8d3%3A0xe7e7fbefc6bb485!2sRewayat!5e0!3m2!1sen!2s!4v1784000318423!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" 
+    loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+</section>
+
+        <div class="row mt-5">
+
+            <!-- Left Side -->
+
+            <div class="col-lg-4">
+
+                <div class="contact-info">
+
+                    <h4>📍 Address</h4>
+                    <p>Rewayat - I-8 Markaz, 1st Floor Shop 102, Vista Mall,, I-8 Markaz, Islamabad</p>
+
+                    <h4>📞 Phone</h4>
+                    <p>051 111 227 000</p>
+
+                    <h4>📧 Email</h4>
+                    <p>info@rewayatrestaurant.com</p>
+
+                    <h4>🕒 Opening Hours</h4>
+                    <p>Mon - Sun : 09:00 AM - 12:45 AM</p>
+
+                </div>
+
+            </div>
+
+            <!-- Right Side -->
+
+            <div class="col-lg-8">
+
+                <form class="contact-form">
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+
+                            <input type="text" placeholder="Your Name">
+
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+
+                            <input type="email" placeholder="Your Email">
+
+                        </div>
+
+                    </div>
+
+                    <input type="text" placeholder="Subject" class="mb-3">
+
+                    <textarea rows="6" placeholder="Message"></textarea>
+
+                    <button type="submit">Send Message</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-lg-12 text-center">
+
+<div class="social-icons">
+
+            <a href="https://www.facebook.com/Rewayat.isb/" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="https://www.instagram.com/rewayat.pk/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://www.tiktok.com/@rewayatrestaurant" target="_blank">
+                <i class="fab fa-tiktok"></i>
+            </a>
+
+        </div>
+
+<hr>
+
+<p>
+
+© Copyright
+
+<b>Rewayat Restaurant</b>
+
+All Rights Reserved
+
+</p>
+
+<p>
+
+Designed by
+
+<span>HINA ISHTIAQ</span>
+
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</footer>
+
+<script src="cart.js"></script>
+
+</body>
+
+</html>

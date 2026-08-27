@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+
+
+<head>
+
+
+<title>Login | Rewayat Restaurant</title>
+<link rel="icon" href="images/logo.png">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:#0c0b09;
+
+}
+
+.login-section{
+
+padding:140px 0 80px;
+
+}
+
+.login-image{
+
+width:100%;
+
+height:550px;
+
+object-fit:cover;
+
+border-radius:12px;
+
+}
+
+.login-section h2{
+
+color:white;
+
+font-size:45px;
+
+font-weight:700;
+
+margin-bottom:30px;
+
+}
+
+.login-section h2 span{
+
+color:#cda45e;
+
+}
+
+/* Navbar */
+
+/*================ Navbar ================*/
+
+.navbar{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+padding:18px 0;
+
+background:rgba(0,0,0,.75);
+
+backdrop-filter:blur(8px);
+
+z-index:9999;
+
+transition:.4s;
+
+}
+
+.logo{
+    width:75px;
+    height:auto;
+}
+
+.brand-name{
+    color:white;
+    font-size:24px;
+    font-weight:700;
+    margin-left:12px;
+    margin-bottom:0;
+}
+
+.menu{
+display:flex;
+justify-content:center;
+align-items:center;
+list-style:none;
+gap:35px;
+margin:0;
+padding:0;
+}
+
+.menu a{
+text-decoration:none;
+color:white;
+font-size:17px;
+font-weight:500;
+transition:.4s;
+}
+
+.menu a:hover{
+color:#cda45e;
+}
+
+.book-btn{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+width:110px;
+
+height:42px;
+
+border:2px solid #cda45e;
+
+border-radius:30px;
+
+text-decoration:none;
+
+color:white;
+
+font-size:14px;
+
+font-weight:500;
+
+transition:.4s;
+
+}
+
+.book-btn:hover{
+
+background:#cda45e;
+
+color:black;
+
+}
+
+.login-form{
+max-width:420px;
+margin:auto;
+margin-top:15px;
+}
+
+.login-form input{
+
+width:100%;
+
+height:55px;
+
+background:#1a1814;
+
+border:1px solid #444;
+
+border-radius:8px;
+
+padding:0 18px;
+
+margin-bottom:20px;
+
+color:#fff;
+
+font-size:16px;
+
+outline:none;
+
+transition:.3s;
+
+}
+
+.login-form input:focus{
+
+border-color:#cda45e;
+
+}
+
+.remember{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:25px;
+
+color:#ddd;
+
+font-size:15px;
+
+}
+
+.remember a{
+
+text-decoration:none;
+
+color:#cda45e;
+
+}
+
+.remember label{
+display:flex;
+align-items:center;
+gap:8px;
+cursor:pointer;
+}
+
+.remember input[type="checkbox"]{
+width:18px;
+height:18px;
+margin:0;
+accent-color:#cda45e;
+}
+
+.login-btn{
+
+width:100%;
+
+height:55px;
+
+border:none;
+
+border-radius:8px;
+
+background:#cda45e;
+
+color:#000;
+
+font-size:17px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.login-btn:hover{
+
+background:#d8b26d;
+
+}
+
+.register-link{
+
+margin-top:25px;
+
+text-align:center;
+
+color:#ddd;
+
+}
+
+.register-link a{
+
+text-decoration:none;
+
+color:#cda45e;
+
+font-weight:600;
+
+}
+
+.login-section{
+
+padding:110px 0 70px;
+
+}
+
+.login-image{
+width:100%;
+height:450px;
+object-fit:cover;
+border-radius:15px;
+box-shadow:0 0 25px rgba(0,0,0,.5);
+}
+
+.login-section h2{
+color:#fff;
+font-size:48px;
+font-weight:700;
+margin-bottom:30px;
+text-align:center;
+}
+
+.login-section h2 span{
+color:#cda45e;
+}
+
+.login-form{
+
+max-width:420px;
+
+margin:auto;
+
+}
+
+.login-form input{
+
+height:48px;
+
+font-size:15px;
+
+margin-bottom:16px;
+
+}
+
+.login-btn{
+
+height:48px;
+
+font-size:16px;
+
+}
+
+.register-link{
+
+font-size:15px;
+
+}
+
+/* CART BADGE */
+
+.cart-link{
+
+position:relative;
+
+}
+
+
+#cart-count{
+
+background:#cda45e;
+color:#000;
+font-size:12px;
+font-weight:700;
+
+width:22px;
+height:22px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+border-radius:50%;
+
+margin-left:5px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ================= Navbar ================= -->
+
+<nav class="navbar">
+
+<div class="container">
+
+<div class="row align-items-center w-100">
+
+    <!-- Logo -->
+
+    <div class="col-lg-3">
+    <a href="index.html" class="d-flex align-items-center text-decoration-none">
+        <img src="images/logo.png" class="logo">
+        <h2 class="brand-name ms-2 mb-0">Rewayat</h2>
+    </a>
+</div>
+
+    <!-- Menu -->
+
+    <div class="col-lg-6">
+
+        <ul class="menu">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="menu.html">Menu</a></li>
+
+            <li><a href="specials.html">Specials</a></li>
+
+            <li><a href="gallery.html">Gallery</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+    </div>
+
+    <!-- Buttons -->
+
+    <div class="col-lg-3">
+
+        <div class="d-flex justify-content-end gap-2">
+
+
+        <a href="cart.html" class="book-btn cart-link">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+&nbsp;Cart
+
+<span id="cart-count">
+0
+</span>
+
+</a>
+
+            <a href="login.html" class="book-btn">Login</a>
+
+            <a href="register.html" class="book-btn">Register</a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+</nav>
+
+<section class="login-section">
+
+<div class="container">
+
+<div class="row align-items-center">
+
+<div class="col-lg-6">
+
+<img src="images/hero.jpeg" class="login-image">
+
+</div>
+
+<div class="col-lg-6">
+
+<h2>Login To <span>Rewayat</span></h2>
+
+<form class="login-form">
+
+    <input type="email" placeholder="Enter Email" required>
+
+    <input type="password" placeholder="Enter Password" required>
+
+    <div class="remember">
+
+        <label>
+
+            <input type="checkbox">
+
+            Remember Me
+
+        </label>
+
+        <a href="#">Forgot Password?</a>
+
+    </div>
+
+    <button type="submit" class="login-btn">
+
+        LOGIN
+
+    </button>
+
+    <p class="register-link">
+
+        Don't have an account?
+
+        <a href="register.html">Register Now</a>
+
+    </p>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+</body>
+
+</html>
